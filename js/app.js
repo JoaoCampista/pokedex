@@ -9,17 +9,17 @@ const generateHTML = (pokemons) =>
     const elementTypes = types.map((typeInfo) => typeInfo.type.name);
     // prettier-ignore
     accumulator += `
-  <li class="card ${elementTypes[0]}">
+  <div class="card ${elementTypes[0]}" style="width: 15vw; height: 30vh;">
+    <h4 class="card-title">${id}. ${name}</h4>
     <img 
-      class="card-image"
+      class="card-image" style="width: 5rem; height: 5rem;"
       alt="${name}"
       src="https://pokeres.bastionbot.org/images/pokemon/${id}.png"
     />
 
-    <h2 class="card-title">${id}. ${name}</h2>
     <p class="card-subtitle">${elementTypes.join(' | ')}</p>
 
-  </li>
+  </div>
 `
     return accumulator;
   }, '');
