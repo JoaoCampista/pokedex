@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>PokeDex</title>
 
-    <!--link rel="stylesheet" href="./css/style.css" /-->
+    <!--link rel="stylesheet" href="./css/style.css" -->
 
     <link
       rel="stylesheet"
@@ -19,11 +19,17 @@
     />
   </head>
   <body>
-    <div class="">
+    <div class="container">
       <h1>Pokedex</h1>
       <div
         data-js="pokedex"
-        class="pokedex d-flex flex-row flex-wrap justify-content-center align-content-center"
+        class=""
+        style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, 10rem);
+          grid-gap: 2rem;
+          padding-inline-start: 0;
+        "
       ></div>
     </div>
 

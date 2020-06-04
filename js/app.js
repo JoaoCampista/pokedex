@@ -9,7 +9,7 @@ const generateHTML = (pokemons) =>
     const elementTypes = types.map((typeInfo) => typeInfo.type.name);
     // prettier-ignore
     accumulator += `
-  <div class="card ${elementTypes[0]}" style="width: 15vw; height: 30vh;">
+  <div class="">
     <h4 class="card-title">${id}. ${name}</h4>
     <img 
       class="card-image" style="width: 5rem; height: 5rem;"
@@ -30,6 +30,8 @@ const insertPokemonsIntoPage = (pokemons) => {
 };
 
 const pokemonPromisses = generatePokemonPromises();
+
+//<!--div class="card ${elementTypes[0]}"-->
 
 // prettier-ignore
 Promise.all(pokemonPromisses)
